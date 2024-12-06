@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  eureka-server:
+    build:
+      context: . # Diretório atual onde está o Dockerfile
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761" # Porta local 8761 mapeada para a porta 8761 no contêiner
+    restart: always # Reiniciado automaticamente se falhar
